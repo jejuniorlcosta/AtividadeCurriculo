@@ -17,6 +17,7 @@ body{
 .container{
     max-width: 900px;
     background-color: rgb(205, 189, 220);
+    margin: 0 auto;
     /* Efeito de sombra suava 
     0px - deslocamento horizontal
     0px - deslocamento vertical
@@ -45,9 +46,6 @@ body{
 img{
     border-radius: 10px;
     border: 4px solid rgba(#255, #255, #255, 0.3);
-}
-a:link{
-    color: rgb(10, 7, 7);
 }
 address{
     font-style: oblique;
@@ -94,4 +92,36 @@ section{
     padding: 20px;
     margin: 15px 0;
     border-radius: 5px;
+}
+.texto-formacao{
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+    /* 
+    A propriedade transition no CSS serve para criar animações suaves quando um valor de estilo muda
+    all Aplica a transição em todas as propriedades mudaram Ex: cor, tamanho, etc;
+    0.3 Duração da animação - Quando menor -> mais rápido/Quanto maior -> mais suave
+    ease Tipos de velocidade de animação Começa devagar -> acelera -> termina devagar
+     */
+     transition: all 0.3s ease;
+     cursor: pointer;
+}
+.texto-formacao:hover{
+    color: rgb(211, 15, 90);
+    /* scale = função de escala (zona) 
+    1.05 = fator de aumento / 1= tamanho original /1.05= 5 maior% / 0.9 = menor (90%)
+    */
+    transform:scale(1.05);
+    text-shadow: 1px 1px 6px rgba(rgb(131, 10, 66), rgb(115, 6, 129), rgb(89, 0, 255), 0.4);
+    
+}
+a{
+    color: rgb(211, 15, 90);
+    text-decoration: none;
+    border-bottom: 1px dotted rgb(211, 15, 90);
+}
+a:hover{
+    color: #ca0790;
+    border-bottom-style:solid;
 }
